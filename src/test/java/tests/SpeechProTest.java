@@ -56,7 +56,7 @@ public class SpeechProTest extends TestBase {
         });
 
         step("Проверка вкладок в верхнем меню сайта", () -> {
-            $(".header-info").shouldHave(text("Компанияbz"));
+            $(".header-info").shouldHave(text("Компания"));
             $(".header-info").shouldHave(text("Новости"));
             $(".header-info").shouldHave(text("Карьера"));
             $(".header-info").shouldHave(text("Контакты"));
@@ -73,6 +73,14 @@ public class SpeechProTest extends TestBase {
 //                    .setPlaceOfLocation("NCR", "Delhi")
 //                    .clickSubmit();
 
+        });
+
+        step("Проверка функции поиска на сайте", () ->{
+            $("#Layer_1").click();
+            $(".support-find").shouldHave(text("Поиск по сайту"));
+            $(".gsc-search-box").click();
+            $("#gs_tti50").setValue("Вакансии");
+            $("#resInfo-0").shouldHave(text("Найдено результатов:"));
         });
 
 
