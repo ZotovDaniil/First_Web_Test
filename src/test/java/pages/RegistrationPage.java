@@ -27,10 +27,10 @@ public class RegistrationPage {
             submitClick=$("#submit");
 
     public RegistrationPage openPage() {
-        open("/automation-practice-form");
-        $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
-        executeJavaScript("$('#fixedban').remove()");
-        executeJavaScript("$('footer').remove()");
+        open("https://www.speechpro.ru/");
+        $(".mp-main_wrapper").shouldHave(text("Группа ЦРТ"));
+//        executeJavaScript("$('#fixedban').remove()");
+//        executeJavaScript("$('footer').remove()");
 
         return this;
     }

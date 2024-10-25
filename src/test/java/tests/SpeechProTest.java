@@ -14,7 +14,7 @@ import java.util.Map;
 import static io.qameta.allure.Allure.step;
 
 
-public class HomeworkWithPageObjects extends TestBase {
+public class SpeechProTest extends TestBase {
 
 
     @BeforeAll
@@ -47,9 +47,9 @@ public class HomeworkWithPageObjects extends TestBase {
     @Owner("zotovds")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Заполнение анкеты студента")
-    @Tag("demoqa")
+    @Tag("webtest")
     void fillFormTest() {
-        step("Открываем форму", () -> {
+        step("Открываем сайт группы компаний ЦРТ", () -> {
             registrationPage.openPage();
         });
 

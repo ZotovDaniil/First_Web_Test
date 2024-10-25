@@ -49,9 +49,9 @@ tasks.withType(Test) {
         }
     }
 }
-task demoqa_test(type: Test) {
+task web_test(type: Test) {
     useJUnitPlatform {
-        includeTags("demoqa")
+        includeTags("webtest")
     }
 }
 task property_test(type: Test) {
