@@ -76,7 +76,7 @@ public class SpeechProTest extends TestBase {
         });
 
         step("Проверка функции поиска на сайте", () ->{
-            $("#Layer_1").click();
+            $(".header-icons_link").click();
             $(".support-find").shouldHave(text("Поиск по сайту"));
             $(".gsc-search-box").click();
             $("#gs_tti50").setValue("Вакансии");
