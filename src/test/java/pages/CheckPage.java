@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class RegistrationPage {
+public class CheckPage {
 
     private CalendarComponent calendarComponent = new CalendarComponent();
     private RegistrationResultsModal registrationResultsModal = new RegistrationResultsModal();
@@ -26,7 +26,7 @@ public class RegistrationPage {
             uploadPictureInput = $("#uploadPicture"),
             submitClick=$("#submit");
 
-    public RegistrationPage openPage() {
+    public CheckPage openPage() {
         open("https://www.speechpro.ru/");
         $(".mp-main_wrapper").shouldHave(text("Группа ЦРТ"));
 //        executeJavaScript("$('#fixedban').remove()");
@@ -35,89 +35,89 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage setFirstName(String value) {
+    public CheckPage setFirstName(String value) {
 
         firstNameInput.setValue(value);
 
         return this;
     }
 
-    public RegistrationPage setLastName(String value) {
+    public CheckPage setLastName(String value) {
         lastNameInput.setValue(value);
 
         return this;
     }
 
-    public RegistrationPage setUserEmail(String value) {
+    public CheckPage setUserEmail(String value) {
         userEmailInput.setValue(value);
 
         return this;
     }
 
-    public RegistrationPage setGender(String value) {
+    public CheckPage setGender(String value) {
         $("#genterWrapper").$(byText(value)).click();
 
         return this;
     }
 
-    public RegistrationPage setNumber(String value) {
+    public CheckPage setNumber(String value) {
         $("#userNumber").setValue(value);
 
         return this;
     }
 
-    public RegistrationPage setBirthDate(String day, String month, String year) {
+    public CheckPage setBirthDate(String day, String month, String year) {
         $("#dateOfBirthInput").click();
         calendarComponent.setDate(day, month, year);
 
         return this;
     }
 
-    public RegistrationPage verifyResultsModalAppears() {
+    public CheckPage verifyResultsModalAppears() {
         registrationResultsModal.verifyModalAppears();
 
         return this;
 
     }
 
-    public RegistrationPage verifyResults(String key, String value) {
+    public CheckPage verifyResults(String key, String value) {
         registrationResultsModal.verifyResults(key, value);
 
         return this;
 
     }
 
-    public RegistrationPage setCurrentAddress(String value) {
+    public CheckPage setCurrentAddress(String value) {
         currentAddressInput.setValue(value);
 
         return this;
     }
 
-    public RegistrationPage setSubjects(String value) {
+    public CheckPage setSubjects(String value) {
         subjectsInput.setValue(value).pressEnter();
 
         return this;
     }
 
-    public RegistrationPage setHobbies(String value) {
+    public CheckPage setHobbies(String value) {
         hobbiesInput.$(byText(value)).click();
 
         return this;
     }
 
-    public RegistrationPage uploadPicture(String value) {
+    public CheckPage uploadPicture(String value) {
         uploadPictureInput.uploadFromClasspath(value);
 
         return this;
     }
 
-    public RegistrationPage setPlaceOfLocation(String state, String city) {
+    public CheckPage setPlaceOfLocation(String state, String city) {
         locationComponent.setLocation(state, city);
 
         return this;
     }
 
-    public RegistrationPage clickSubmit() {
+    public CheckPage clickSubmit() {
         submitClick.click();
         return this;
     }

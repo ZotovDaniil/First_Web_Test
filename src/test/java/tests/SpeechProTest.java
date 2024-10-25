@@ -44,19 +44,19 @@ public class SpeechProTest extends TestBase {
     }
 
     @Test
-    @Feature("Fill Form Test")
-    @Story("Заполнение и проверка формы")
+    @Feature("Web Check")
+    @Story("Проверка меню и вкладок сайта ЦРТ")
     @Owner("zotovds")
     @Severity(SeverityLevel.BLOCKER)
-    @DisplayName("Заполнение анкеты студента")
+    @DisplayName("Проверка сайта")
     @Tag("webtest")
-    void fillFormTest() {
+    void checkPageTest() {
         step("Открываем сайт группы компаний ЦРТ", () -> {
-            registrationPage.openPage();
+            checkPage.openPage();
         });
 
         step("Проверка вкладок в верхнем меню сайта", () -> {
-            $(".header-info").shouldHave(text("Компания"));
+            $(".header-info").shouldHave(text("Компанияbz"));
             $(".header-info").shouldHave(text("Новости"));
             $(".header-info").shouldHave(text("Карьера"));
             $(".header-info").shouldHave(text("Контакты"));
@@ -77,7 +77,7 @@ public class SpeechProTest extends TestBase {
 
 
         step("Проверяем заполненную форму", () -> {
-            registrationPage.verifyResultsModalAppears()
+            checkPage.verifyResultsModalAppears()
                     .verifyResults("Student Name", "Vasya " + "Pupkin")
                     .verifyResults("Student Email", "email@mail.ru")
                     .verifyResults("Gender", "Other")

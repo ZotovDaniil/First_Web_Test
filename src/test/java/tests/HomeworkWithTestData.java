@@ -17,7 +17,7 @@ public class HomeworkWithTestData extends TestBase {
                 lastname = "Pupkin",
                 email = "email@mail.ru";
 
-        registrationPage.openPage()
+        checkPage.openPage()
                 .setFirstName(firstname)
                 .setLastName(lastname)
                 .setUserEmail(email)
@@ -33,7 +33,7 @@ public class HomeworkWithTestData extends TestBase {
 
 
 
-        registrationPage.verifyResultsModalAppears()
+        checkPage.verifyResultsModalAppears()
                 .verifyResults("Student Name", firstname + " " + lastname)
                 .verifyResults("Student Email", email)
                 .verifyResults("Gender", "Other" )

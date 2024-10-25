@@ -2,10 +2,10 @@ package tests;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
-import pages.RegistrationPage;
+import pages.CheckPage;
 
 public class TestBase {
-    RegistrationPage registrationPage = new RegistrationPage();
+    CheckPage checkPage = new CheckPage();
 
     @BeforeAll
     static void BeforeAll() {
