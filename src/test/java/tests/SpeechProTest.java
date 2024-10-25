@@ -56,7 +56,10 @@ public class SpeechProTest extends TestBase {
         });
 
         step("Проверка вкладок в верхнем меню сайта", () -> {
-            $(".header-info").shouldHave(text("Компания"))
+            $(".header-info").shouldHave(text("Компания"));
+            $(".header-info").shouldHave(text("Новости"));
+            $(".header-info").shouldHave(text("Карьера"));
+            $(".header-info").shouldHave(text("Контакты"));
 //            registrationPage.setFirstName("Vasya")
 //                    .setLastName("Pupkin")
 //                    .setUserEmail("email@mail.ru")
@@ -69,7 +72,7 @@ public class SpeechProTest extends TestBase {
 //                    .uploadPicture("img/1.png")
 //                    .setPlaceOfLocation("NCR", "Delhi")
 //                    .clickSubmit();
-            ;
+
         });
 
 
