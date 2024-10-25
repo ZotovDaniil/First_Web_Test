@@ -11,6 +11,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
 
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
 
@@ -53,19 +55,20 @@ public class SpeechProTest extends TestBase {
             registrationPage.openPage();
         });
 
-        step("Заполняем форму", () -> {
-            registrationPage.setFirstName("Vasya")
-                    .setLastName("Pupkin")
-                    .setUserEmail("email@mail.ru")
-                    .setGender("Other")
-                    .setNumber("1234567890")
-                    .setBirthDate("30", "July", "2007")
-                    .setCurrentAddress("internet")
-                    .setSubjects("Math")
-                    .setHobbies("Sports")
-                    .uploadPicture("img/1.png")
-                    .setPlaceOfLocation("NCR", "Delhi")
-                    .clickSubmit();
+        step("Проверка вкладок в верхнем меню сайта", () -> {
+            $(".header-info").shouldHave(text("Компания"))
+//            registrationPage.setFirstName("Vasya")
+//                    .setLastName("Pupkin")
+//                    .setUserEmail("email@mail.ru")
+//                    .setGender("Other")
+//                    .setNumber("1234567890")
+//                    .setBirthDate("30", "July", "2007")
+//                    .setCurrentAddress("internet")
+//                    .setSubjects("Math")
+//                    .setHobbies("Sports")
+//                    .uploadPicture("img/1.png")
+//                    .setPlaceOfLocation("NCR", "Delhi")
+//                    .clickSubmit();
             ;
         });
 
