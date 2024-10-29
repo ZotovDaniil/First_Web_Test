@@ -49,11 +49,22 @@ tasks.withType(Test) {
         }
     }
 }
-task web_test(type: Test) {
+task switch_language_test(type: Test) {
     useJUnitPlatform {
-        includeTags("webtest")
+        includeTags("switch_language")
     }
 }
+task searching_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("search")
+    }
+}
+task check_menu_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("menu_checking")
+    }
+}
+
 task property_test(type: Test) {
     useJUnitPlatform {
         includeTags("property")
