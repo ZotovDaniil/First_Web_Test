@@ -1,12 +1,14 @@
 package pages;
 
+import com.codeborne.selenide.SelenideElement;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
 public class CheckPage {
 
-
-//            firstNameInput = $("#firstName"),
+    private SelenideElement
+            menuHeaderLink = $(".header-info");
 //            lastNameInput = $("#lastName"),
 //            userEmailInput = $("#userEmail"),
 //            currentAddressInput = $("#currentAddress"),
@@ -20,19 +22,15 @@ public class CheckPage {
         $(".mp-main_wrapper").shouldHave(text("Группа ЦРТ"));
         return this;
     }
-}
-//        executeJavaScript("$('#fixedban').remove()");
-//        executeJavaScript("$('footer').remove()");
 
-//        return this;
-//    }
-//
-//    public CheckPage setFirstName(String value) {
-//
-//        firstNameInput.setValue(value);
-//
-//        return this;
-//    }
+
+    public CheckPage checkMenuHeader(String value) {
+
+        menuHeaderLink.shouldHave(text(value));
+
+        return this;
+    }
+}
 //
 //    public CheckPage setLastName(String value) {
 //        lastNameInput.setValue(value);
