@@ -8,10 +8,6 @@ public class CheckMenuTest extends TestBase {
 
 
     @Test
-    @Feature("Web Check")
-    @Story("Проверка меню и вкладок сайта ЦРТ")
-    @Owner("zotovds")
-    @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Проверка верхнего меню сайта")
     @Tag("menu_checking")
     void checkMenuTest() {

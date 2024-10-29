@@ -12,8 +12,6 @@ public class SwitchLanguageTest extends TestBase {
 
 
     @Test
-    @Story("Проверка меню и вкладок сайта ЦРТ")
-    @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Проверка выбора языка на сайте")
     @Tag("switch_language")
     void switchLanguageTest() {

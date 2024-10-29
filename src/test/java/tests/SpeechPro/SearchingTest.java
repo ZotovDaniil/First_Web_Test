@@ -10,10 +10,6 @@ public class SearchingTest extends TestBase {
 
 
     @Test
-    @Feature("Web Check")
-    @Story("Проверка меню и вкладок сайта ЦРТ")
-    @Owner("zotovds")
-    @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Проверка кнопки поиска на сайте")
     @Tag("search")
     void checkSearchTest() {
